@@ -1,1 +1,1 @@
-include ':app' , ':toast' , ':magicindicator'
+include ':app' , ':toast' , ':magicindicator' , ':material'
