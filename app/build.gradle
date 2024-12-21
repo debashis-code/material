@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
-apply plugin: 'maven'
+/*apply plugin: 'maven'
 
 group = 'com.github.debashis-code'
 version = '1.0.0'
 
 sourceCompatibility = 1.8 // java 8
-targetCompatibility = 1.8
+targetCompatibility = 1.8 */
 
 android {
     compileSdkVersion 29
