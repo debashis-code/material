@@ -1,8 +1,5 @@
-plugins {
-       id 'com.android.library'
+apply plugin: 'com.android.application'
        
-}
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"

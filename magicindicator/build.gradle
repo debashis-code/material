@@ -1,31 +1,60 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
+group = 'com.github.debashis-code'
+version = '.version'
+
+sourceCompatibility = 1.8 // java 8
+targetCompatibility = 1.8
+
+/*java {
+		withSourcesJar()
+		withJavadocJar()
+	*/
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+  compileSdkVersion 28
+  buildToolsVersion "28.0.3"
 
-    defaultConfig {
-        
-        minSdkVersion 21
-        targetSdkVersion 28
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 28
        
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    
 }
 
+dependencies {
+    implementation project(':library')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter:2.5.0'
+
+    
+}
 android {
       lintOptions {
           abortOnError false
       }
   }
-
-dependencies {
-  implementation project(':toast')
-	implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.debashis-code'
+                artifactId = 'magicindicator'
+                version = '.version'
+            }
+        }
+    }
 }
