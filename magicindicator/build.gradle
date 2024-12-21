@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.github.debashis-code'
-version = '.version'
+version = '1.0.1'
 
 sourceCompatibility = 1.8 // java 8
 targetCompatibility = 1.8
@@ -52,8 +52,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.debashis-code'
-                artifactId = 'magicindicator'
-                version = '.version'
+                artifactId = 'material'
+                version = '1.0.1'
             }
         }
     }
