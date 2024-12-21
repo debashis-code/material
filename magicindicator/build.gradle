@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    implementation project(':toast')
+   // implementation project(':toast')
     implementation 'androidx.appcompat:appcompat:1.0.0'
    
 
@@ -52,7 +52,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.debashis-code'
-                artifactId = 'material'
+                artifactId = 'magicindicator'
                 version = '1.0.1'
             }
         }
