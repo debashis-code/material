@@ -42,7 +42,7 @@ android {
                 from components.release
                 groupId = 'com.github.debashis-code'
                 artifactId = 'material'
-                version = '1.0.1'
+                version = '1.0.'
             }
         }
     }
