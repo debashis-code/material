@@ -3,6 +3,8 @@ package com.github.debacodex;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import io.github.debacodex.material.toast.DnToast;
+import net.lucode.hackware.magicindicator.MagicIndicator;
 
 public class MainActivity extends AppCompatActivity {
     
@@ -14,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 		Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 	
-        
+       
     }
     
 }
