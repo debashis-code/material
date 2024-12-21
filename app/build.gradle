@@ -37,7 +37,7 @@ android {
   afterEvaluate {
     publishing {
         publications {
-            // Creates a Maven publication called "release".
+            
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.debashis-code'
